@@ -9,6 +9,7 @@ import TaskDetailsPage from "./pages/TaskDetailsPage";
 import Signin from "./pages/Signin";
 import { Navigate } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -37,9 +38,14 @@ const router = createBrowserRouter([
       {
         path: "tasks/:id",
         element: (<TaskDetailsPage />)
-      }
+      },
+      
     ]
-  }
+  },
+      {
+        path: "*", // Catch-all for undefined nested routes
+        element: (<NotFound />)
+      }
 ]);
 
 const App = () => {
