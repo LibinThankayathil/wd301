@@ -20,7 +20,7 @@ const TaskDetailsPage: React.FC = () => {
     }
   );
   
-  const task = taskAppState.tasks.find((task, index) => index.toString() === id);
+  const task = taskAppState.tasks.find((_task, index) => index.toString() === id);
 
   if (!task) {
     return (
@@ -29,7 +29,7 @@ const TaskDetailsPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-red-500 mb-4">Task Not Found</h2>
           <p className="text-gray-600 mb-4">The task you're looking for doesn't exist.</p>
           <Link
-            to={`/tasks`}
+            to="/tasks"
             className="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
           >
             Go Back to Task List
