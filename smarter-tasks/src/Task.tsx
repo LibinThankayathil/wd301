@@ -13,7 +13,7 @@ const Task = (props: TaskProp) => {
     <div className="TaskItem shadow-md border border-slate-100">
         <div className="flex justify-between items-start">
           <div>
-            <a href={`/tasks/${props.id || ""}`}>
+            <a href={`/tasks/${props.id}`}>
               <h2 className="text-base font-bold my-1">{props.title}</h2>
             </a>
             <p className="text-sm text-slate-500 flex items-center gap-1">
