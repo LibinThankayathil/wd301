@@ -39,13 +39,16 @@ const router = createBrowserRouter([
         path: "tasks/:id",
         element: (<TaskDetailsPage />)
       },
-      
     ]
   },
-      {
-        path: "*", // Catch-all for undefined nested routes
-        element: (<NotFound />)
-      }
+  {
+    path: "/notfound",
+    element: (<NotFound />)
+  },
+  {
+    path: "*",
+    element: (<Navigate to="/notfound" replace />)
+  }
 ]);
 
 const App = () => {
