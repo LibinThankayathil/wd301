@@ -52,7 +52,7 @@ const TaskDetailsPage: React.FC = () => {
           Back to Task List
         </Link>
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">{task.title}</h1>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">{task.title}</h3>
           <div className="space-y-4">
             <div>
               <h2 className="text-sm font-medium text-gray-500">Due Date</h2>
