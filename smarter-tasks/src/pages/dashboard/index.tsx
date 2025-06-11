@@ -2,7 +2,7 @@ import React from 'react';
 
 const Dashboard: React.FC = () => {
     const userDataString = localStorage.getItem('userData');
-    const user = JSON.parse(userDataString || '{}'); 
+    const user = userDataString ? JSON.parse(userDataString) : {};
 
     const logout = () => {
       localStorage.removeItem('authToken');
@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
       <p className="font-bold text-center text-gray-800 mb-8">Name: {user.name} </p>
       <p className="font-bold text-center text-gray-800 mb-8">Email: {user.email} </p>
       <div>
-        <a href="/" onClick={logout} id="logout-link" >Sign Out</a>
+        <a href="/signin" onClick={logout} id="logout-link" >Sign Out</a>
       </div>
     </div>
   );
